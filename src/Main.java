@@ -1,4 +1,9 @@
 public class Main {
+
+    public static void printSeparator() {
+        System.out.println("--------------------------------" );
+    }
+
     public static void main(String[] args) {
         Car car = new Car("car1", 4);
         Car car2 = new Car("car2", 4);
@@ -11,11 +16,13 @@ public class Main {
         Bicycle bicycle2 = new Bicycle("bicycle2", 2);
 
         ServiceStation station = new ServiceStation();
-        station.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
+        station.check(car);
+        station.check(car2);
+        printSeparator();
+        station.check(bicycle);
+        station.check(bicycle2);
+        printSeparator();
+        station.check(truck);
+        station.check(truck2);
     }
 }

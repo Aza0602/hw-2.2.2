@@ -1,15 +1,22 @@
-public class Truck extends WheeledTransport{
+public class Truck extends WheeledTransport implements Engineable {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    @Override
+    public void check() {
+        checkTyres();
+        checkEngine();
+        checkTrailer();
     }
 
+    @Override
+    public void updateTyre() {
+        System.out.println("Меняем покрышку у грузовика");
+    }
+    @Override
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель у грузовика");
     }
 
     public void checkTrailer() {

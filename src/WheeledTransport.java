@@ -1,6 +1,22 @@
-public class WheeledTransport {
+public abstract class WheeledTransport {
     public String modelName;
     public int wheelsCount;
+
+    public WheeledTransport(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
+
+    public void checkTyres() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
+
+    public abstract void check();
+
+    public abstract void updateTyre();
 
     public String getModelName() {
         return modelName;
@@ -15,11 +31,6 @@ public class WheeledTransport {
     }
 
     public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
-
-    public WheeledTransport(String modelName, int wheelsCount) {
-        this.modelName = modelName;
         this.wheelsCount = wheelsCount;
     }
 }
