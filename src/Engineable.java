@@ -1,4 +1,5 @@
 public interface Engineable {
-    void checkEngine();
-    
+    default void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
 }

@@ -16,7 +16,9 @@ public abstract class WheeledTransport {
 
     public abstract void check();
 
-    public abstract void updateTyre();
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
 
     public String getModelName() {
         return modelName;
