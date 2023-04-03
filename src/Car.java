@@ -1,13 +1,13 @@
-public class Car {
+public class Car extends WheeledTransport implements Engineable {
 
-    public String modelName;
-    public int wheelsCount;
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public Car(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
+    @Override
+    public void check() {
+        checkTyres();
+        checkEngine();
     }
 
-    public void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
 }
