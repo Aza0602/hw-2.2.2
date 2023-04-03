@@ -10,9 +10,4 @@ public class Car extends WheeledTransport implements Engineable {
         checkEngine();
     }
 
-    @Override
-    public void updateTyre() {
-        super.updateTyre();
-    }
-
 }

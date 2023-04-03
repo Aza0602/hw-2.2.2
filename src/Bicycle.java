@@ -8,9 +8,5 @@ public class Bicycle extends WheeledTransport {
         checkTyres();
     }
 
-    @Override
-    public void updateTyre() {
-        super.updateTyre();
-    }
 }
 

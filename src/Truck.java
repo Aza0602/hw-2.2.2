@@ -1,4 +1,4 @@
-public class Truck extends WheeledTransport implements Engineable {
+public class Truck extends Car {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
@@ -8,11 +8,6 @@ public class Truck extends WheeledTransport implements Engineable {
         checkTyres();
         checkEngine();
         checkTrailer();
-    }
-
-    @Override
-    public void updateTyre() {
-        super.updateTyre();
     }
 
     public void checkTrailer() {
